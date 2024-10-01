@@ -16,7 +16,7 @@ echo "Enabling Firewall..."
 echo "Enabling Stealth Mode..."
 /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
 
-# Enable Gatekeeper (prevents installation of unverified apps)
+# Enable Gatekeeper (to prevent the installation of any unverified apps)
 echo "Enabling Gatekeeper..."
 spctl --master-enable
 
@@ -64,7 +64,7 @@ defaults write com.apple.NetworkBrowser DisableAirDrop -bool YES
 echo "Updating macOS software and system applications..."
 softwareupdate --install --all
 
-# Disable Auto-Running of Safe Files in Safari
+# Disable Auto-Running of Safe Files
 echo "Disabling auto-run of safe files in Safari..."
 defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
 
@@ -75,4 +75,4 @@ echo "Disabling Java..."
 # Lock down privacy settings
 echo "Locking down privacy settings..."
 
-echo "Hardening process completed! Please restart the changes to take full effect."
+echo "Hardening process completed! Please restart for these changes to take full effect."
