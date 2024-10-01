@@ -44,11 +44,6 @@ spctl --master-enable
 echo "Disabling Wake on Network Access..."
 pmset -a womp 0
 
-# Require password immediately after sleep or screen saver begins
-echo "Setting password requirement after sleep..."
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
 # Disable automatic login
 echo "Disabling automatic login..."
 defaults delete /Library/Preferences/.GlobalPreferences com.apple.login.mcx.DisableAutoLoginClient
@@ -79,15 +74,5 @@ echo "Disabling Java..."
 
 # Lock down privacy settings
 echo "Locking down privacy settings..."
-# You can also configure privacy preferences via System Preferences manually
 
 echo "Hardening process completed. Please review the settings and restart your system for the changes to take full effect."
-
-# optional uncomment by removing # to include
-
-# echo "Setting EFI (Firmware) password..."
-# You will need to manually set this as it can't be done via script
-# sudo firmwarepasswd -setpasswd
-
-# echo "Disabling Bluetooth"
-# blueutil --power 0
