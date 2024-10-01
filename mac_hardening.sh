@@ -24,7 +24,7 @@ spctl --master-enable
 echo "Enabling audit logs..."
 launchctl load -w /System/Library/LaunchDaemons/com.apple.auditd.plist
 
-# Enable Secure Keyboard Entry in Terminal (protects against keyloggers)
+# Enable Secure Keyboard Entry in Terminal (to protect against stuff like keyloggers)
 echo "Enabling Secure Keyboard Entry in Terminal..."
 defaults write com.apple.terminal SecureKeyboardEntry -bool true
 
@@ -75,4 +75,4 @@ echo "Disabling Java..."
 # Lock down privacy settings
 echo "Locking down privacy settings..."
 
-echo "Hardening process completed. Please review the settings and restart your system for the changes to take full effect."
+echo "Hardening process completed! Please restart the changes to take full effect."
