@@ -91,8 +91,6 @@ echo "Disabling Java..."
 # Lock down privacy settings
 # Strengthening privacy settings protects sensitive information from being shared without your consent, reducing exposure to privacy-invasive attacks.
 echo "Locking down privacy settings..."
+echo "Reticulating splines..."
 
 echo "Hardening process complete (•_•)7 please restart your Mac for the changes to take full effect."
-```
-
-This script is now more accessible to non-technical users by explaining the purpose and the potential security risks mitigated by each step.
